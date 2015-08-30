@@ -1,3 +1,5 @@
+# Copyright (c) 2015, Matt Layman
+
 import logging
 from wsgiref.simple_server import demo_app
 
