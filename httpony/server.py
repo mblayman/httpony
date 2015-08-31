@@ -14,7 +14,7 @@ def main():
     port = 8000
     print (
         "Making all your dreams for a pony come true on http://{0}:{1}.\n"
-        "Press Ctrl+C to quit."
+        "Press Ctrl+C to quit.\n"
     ).format(hostname, port)
 
     # Hush, werkzeug.
