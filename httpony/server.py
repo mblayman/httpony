@@ -1,9 +1,10 @@
 # Copyright (c) 2015, Matt Layman
 
 import logging
-from wsgiref.simple_server import demo_app
 
 from werkzeug.serving import run_simple
+
+from httpony.application import make_app
 
 
 def main():
@@ -18,8 +19,13 @@ def main():
     # Hush, werkzeug.
     logging.getLogger('werkzeug').setLevel(logging.CRITICAL)
 
-    # TODO: Stop using the demo app.
-    run_simple(hostname, port, demo_app)
+    # TODO: app factory
+    # TODO: plugin manager
+    # TODO: env
+    # TODO: args
+    # TODO: request
+    app = make_app()
+    run_simple(hostname, port, app)
 
 
 if __name__ == '__main__':
