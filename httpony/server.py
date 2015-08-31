@@ -21,7 +21,6 @@ def main():
     logging.getLogger('werkzeug').setLevel(logging.CRITICAL)
 
     plugin_manager.load_installed_plugins()
-    # TODO: request
     app = make_app()
     run_simple(hostname, port, app)
 
