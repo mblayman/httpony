@@ -9,7 +9,10 @@ from httpony import __version__
 
 
 if __name__ == '__main__':
-    long_description = __doc__
+    with open('docs/releases.rst', 'r') as f:
+        releases = f.read()
+
+    long_description = __doc__ + '\n\n' + releases
 
     install_requires = [
         'httpie',
