@@ -18,6 +18,13 @@ def make_app():
     server = 'HTTPony/{0}'.format(__version__)
 
     def application(environ, start_response):
+        # The WSGI server puts content length and type in the environment
+        # even when not provided with the request. Drop them if they are empty.
+        if environ.get('CONTENT_LENGTH') == '':
+            del environ['CONTENT_LENGTH']
+        if environ.get('CONTENT_TYPE') == '':
+            del environ['CONTENT_TYPE']
+
         wrequest = WerkzeugRequest(environ)
         data = wrequest.get_data()
         request = Request(
