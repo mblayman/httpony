@@ -5,7 +5,7 @@ HTTPony is an HTTP request listener that pretty prints requests to a terminal.
 
 from setuptools import find_packages, setup
 
-__version__ = '0.1'
+from httpony import __version__
 
 
 if __name__ == '__main__':
