@@ -12,6 +12,7 @@ if __name__ == '__main__':
     long_description = __doc__
 
     install_requires = [
+        'httpie',
         'werkzeug',
     ]
 
