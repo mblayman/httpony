@@ -36,6 +36,12 @@ Astute readers will point out that HTTPie can show request output with `-v`,
 but HTTPony will output for any client that talks HTTP.
 Many libraries do not quickly show their request output.
 
+To get started:
+
+```bash
+$ pip install httpony
+```
+
 This project is heavily indebted to [HTTPie][pie].
 Thanks for making a great alternative to cURL.
 

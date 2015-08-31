@@ -7,6 +7,17 @@ It is a useful aide for developing clients that send HTTP requests.
 HTTPony acts as a sink for a client
 so that a developer can understand what the client is sending.
 
+Synopsis:
+
+.. code-block:: bash
+
+    $ pip install httpony
+    Successfully installed httpony
+    $ httpony
+    Making all your dreams for a pony come true on http://localhost:8000.
+    Press Ctrl+C to quit.
+
 .. toctree::
    :maxdepth: 2
 
+   releases
