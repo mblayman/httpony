@@ -7,6 +7,8 @@ It is a useful aide for developing clients that send HTTP requests.
 HTTPony acts as a sink for a client
 so that a developer can understand what the client is sending.
 
+HTTPony is `developed on GitHub <https://github.com/mblayman/httpony>`_.
+
 Synopsis:
 
 .. code-block:: bash
