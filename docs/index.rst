@@ -17,6 +17,8 @@ Synopsis:
     Making all your dreams for a pony come true on http://localhost:8000.
     Press Ctrl+C to quit.
 
+`See the README for an example. <https://github.com/mblayman/httpony>`_
+
 .. toctree::
    :maxdepth: 2
 
