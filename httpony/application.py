@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from httpie.cli import parser
 from httpie.context import Environment
 from httpie.output import streams
@@ -17,15 +19,21 @@ def make_app():
 
     def application(environ, start_response):
         wrequest = WerkzeugRequest(environ)
+        data = wrequest.get_data()
         request = Request(
             method=wrequest.method,
             url=wrequest.url,
             headers=wrequest.headers,
+            data=data,
         )
         prepared = request.prepare()
 
         stream = streams.build_output_stream(args, env, prepared, response=None)
         streams.write(stream, env.stdout, env.stdout_isatty)
+
+        # When there is data in the request, give the next one breathing room.
+        if data:
+            print("\n", file=env.stdout)
 
         # Make dreams come true.
         response = Response(headers={'Server': server})
