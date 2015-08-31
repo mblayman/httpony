@@ -2,6 +2,7 @@
 
 import logging
 
+from httpie.plugins import plugin_manager
 from werkzeug.serving import run_simple
 
 from httpony.application import make_app
@@ -19,8 +20,7 @@ def main():
     # Hush, werkzeug.
     logging.getLogger('werkzeug').setLevel(logging.CRITICAL)
 
-    # TODO: app factory
-    # TODO: plugin manager
+    plugin_manager.load_installed_plugins()
     # TODO: env
     # TODO: args
     # TODO: request
