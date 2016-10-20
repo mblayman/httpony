@@ -1,3 +1,5 @@
+# Copyright (c) 2016, Matt Layman
+
 from __future__ import print_function
 
 from httpie.cli import parser
@@ -35,8 +37,9 @@ def make_app():
         )
         prepared = request.prepare()
 
-        stream = streams.build_output_stream(args, env, prepared, response=None)
-        streams.write(stream, env.stdout, env.stdout_isatty)
+        stream = streams.build_output_stream(
+            args, env, prepared, response=None, output_options=args.output_options)
+        streams.write_stream(stream, env.stdout, env.stdout_isatty)
 
         # When there is data in the request, give the next one breathing room.
         if data:

@@ -1,4 +1,4 @@
-# Copyright (c) 2015, Matt Layman
+# Copyright (c) 2016, Matt Layman
 """
 HTTPony is an HTTP request listener that pretty prints requests to a terminal.
 """
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     long_description = __doc__ + '\n\n' + releases
 
     install_requires = [
-        'httpie',
+        'httpie>=0.9.4',
         'Werkzeug',
     ]
 

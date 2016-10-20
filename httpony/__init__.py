@@ -1,3 +1,3 @@
-# Copyright (c) 2015, Matt Layman
+# Copyright (c) 2016, Matt Layman
 
-__version__ = '0.1'
+__version__ = '0.2'
