@@ -1,4 +1,4 @@
-# Copyright (c) 2016, Matt Layman
+# Copyright (c) 2016, Matt Layman and contributors
 
 import logging
 
