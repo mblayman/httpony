@@ -9,5 +9,5 @@ class TestServer(unittest.TestCase):
 
     @mock.patch('httpony.server.run_simple')
     def test_runs(self, run_simple):
-        server.main()
+        server.main(['httpony'])
         self.assertTrue(run_simple.called)
