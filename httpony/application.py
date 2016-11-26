@@ -38,7 +38,8 @@ def make_app():
         prepared = request.prepare()
 
         stream = streams.build_output_stream(
-            args, env, prepared, response=None, output_options=args.output_options)
+            args, env, prepared, response=None,
+            output_options=args.output_options)
         streams.write_stream(stream, env.stdout, env.stdout_isatty)
 
         # When there is data in the request, give the next one breathing room.

@@ -20,6 +20,9 @@ matrix:
     - os: osx
       language: generic
       env: TOX_ENV=py27
+    - os: linux
+      python: 3.5
+      env: TOX_ENV=flake8
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install pyenv-virtualenv; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then virtualenv venv; fi
