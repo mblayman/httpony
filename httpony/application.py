@@ -15,7 +15,9 @@ from httpony import __version__
 def make_app():
     """Make a WSGI app that has all the HTTPie pieces baked in."""
     env = Environment()
-    args = parser.parse_args(args=['/'], env=env)
+    # STDIN is ignored because HTTPony runs a server that doesn't care.
+    # Additionally, it is needed or else pytest blows up.
+    args = parser.parse_args(args=['/', '--ignore-stdin'], env=env)
     args.output_options = 'HB'  # Output only requests.
     server = 'HTTPony/{0}'.format(__version__)
 
