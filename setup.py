@@ -1,4 +1,4 @@
-# Copyright (c) 2016, Matt Layman and contributors
+# Copyright (c) 2017, Matt Layman and contributors
 """
 HTTPony is an HTTP request listener that pretty prints requests to a terminal.
 """
