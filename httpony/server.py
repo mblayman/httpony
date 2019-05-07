@@ -1,4 +1,4 @@
-# Copyright (c) 2017, Matt Layman and contributors
+# Copyright (c) 2019, Matt Layman and contributors
 
 import argparse
 import logging
@@ -17,10 +17,11 @@ def main(argv=sys.argv):
     port = args.port
     print(
         "Making all your dreams for a pony come true on http://{0}:{1}.\n"
-        "Press Ctrl+C to quit.\n".format(hostname, port))
+        "Press Ctrl+C to quit.\n".format(hostname, port)
+    )
 
     # Hush, werkzeug.
-    logging.getLogger('werkzeug').setLevel(logging.CRITICAL)
+    logging.getLogger("werkzeug").setLevel(logging.CRITICAL)
 
     plugin_manager.load_installed_plugins()
     app = make_app()
@@ -40,20 +41,20 @@ def parse(argv):
 def build_parser():
     """Build the parser that will have all available commands and options."""
     description = (
-        'HTTPony (pronounced aych-tee-tee-pony) is a simple HTTP '
-        'server that pretty prints HTTP requests to a terminal. It '
-        'is a useful aide for developing clients that send HTTP '
-        'requests. HTTPony acts as a sink for a client so that a '
-        'developer can understand what the client is sending.')
+        "HTTPony (pronounced aych-tee-tee-pony) is a simple HTTP "
+        "server that pretty prints HTTP requests to a terminal. It "
+        "is a useful aide for developing clients that send HTTP "
+        "requests. HTTPony acts as a sink for a client so that a "
+        "developer can understand what the client is sending."
+    )
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument(
-        '-l', '--listen', help='set the IP address or hostname',
-        default='localhost')
-    parser.add_argument(
-        '-p', '--port', help='set the port', default=8000, type=int)
+        "-l", "--listen", help="set the IP address or hostname", default="localhost"
+    )
+    parser.add_argument("-p", "--port", help="set the port", default=8000, type=int)
 
     return parser
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

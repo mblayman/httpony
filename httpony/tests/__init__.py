@@ -1,1 +1,1 @@
-# Copyright (c) 2017, Matt Layman and contributors
+# Copyright (c) 2019, Matt Layman and contributors
